@@ -7,3 +7,5 @@ gem "opal-sprockets", git: "https://github.com/4r2r/opal-sprockets.git", ref: "f
 gem "sprockets", "2.10.1"
 gem "rack", "1.5.2"
 #gem 'tilt', '>= 1.3.4', '~> 1.3'
+
+gem "thin"
