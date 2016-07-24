@@ -3,6 +3,7 @@ require "opal-parser"
 require "json"
 require "two"
 require "github"
+require "browser"
 require "rrobots/rrobots"
 
 # module Kernel

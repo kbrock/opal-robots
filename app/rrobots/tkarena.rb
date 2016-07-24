@@ -1,5 +1,3 @@
-require 'browser'
-
 TkRobot = Struct.new(:body, :gun, :radar, :speech, :info, :status)
 
 class TkArena
@@ -47,8 +45,8 @@ class TkArena
   def init_canvas
     @two = `new Two({width: #{xres}, height: #{yres}})`
     @two = Native(@two)
-    arena = $document['arena']
-    @two.appendTo arena
+    #arena = Native(`$document['arena']`)
+    @two.appendTo `document.getElementById("arena")`
   end
 
   def init_simulation
