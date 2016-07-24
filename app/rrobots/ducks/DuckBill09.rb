@@ -2,7 +2,7 @@
 #Duckbill05, but fires power 3 bullets
 
 class DuckBill09
-  include Robot
+  include ::Robot
   # ###########
   # #    Initialize
   # ###########

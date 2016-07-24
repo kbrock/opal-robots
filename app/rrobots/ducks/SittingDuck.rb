@@ -1,5 +1,5 @@
 class SittingDuck
-   include Robot
+  include ::Robot
 
   def tick events
     turn_radar 5 if time == 0

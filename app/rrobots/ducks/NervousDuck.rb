@@ -1,5 +1,5 @@
 class NervousDuck
-   include Robot
+  include ::Robot
 
   def tick events
     turn_radar 1 if time == 0

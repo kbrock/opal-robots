@@ -1,5 +1,5 @@
 class WKB
-  include Robot
+  include ::Robot
 
   # Constants
   if !self.const_defined?(:FIRE_MIN)

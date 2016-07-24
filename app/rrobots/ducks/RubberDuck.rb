@@ -372,7 +372,7 @@ http://bash.org/?240849
       corr_values
     end # }}}
   end # }}}
-  class Robot # {{{
+  class Robot2 # {{{
     include ::Robot
 
     def initialize
@@ -385,4 +385,4 @@ http://bash.org/?240849
   end # }}}
 end
 
-class RubberDuck < RubberRobot::Robot; end
+class RubberDuck < RubberRobot::Robot2; end
