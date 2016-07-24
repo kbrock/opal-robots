@@ -1,18 +1,17 @@
 require "opal"
 require "opal-parser"
-require "pp"
 require "json"
 require "two"
 require "github"
-require "browser"
 require "rrobots/rrobots"
 
-module Kernel
-  def puts(*things)
-    log = $document['log']
-    log.inner_text = log.inner_text + "\n" + things * "\n"
-  end
-end
+# module Kernel
+#   def puts(*things)
+#     #log = $document['log']
+#     log =Native(`document.getElementById("log")`)
+#     log.inner_text = log.inner_text + "\n" + things * "\n"
+#   end
+# end
 
 class String
   def classify
@@ -38,7 +37,7 @@ class Application
 
   def gist_ids
     @gist_ids ||= begin
-      fragment = $document.location.fragment
+      fragment = `document.location.hash`
       fragment.scan(/\d+/)
     end
   end
@@ -164,4 +163,4 @@ class Application
   end
 end
 
-Application.new $document.body
+Application.new
