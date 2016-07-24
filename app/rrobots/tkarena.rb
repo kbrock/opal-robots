@@ -73,7 +73,7 @@ class TkArena
     end
     ticks.times do
       if @battlefield.game_over
-        @interval.stop
+        stop
         @on_game_over_handlers.each{|h| h.call(@battlefield) }
         unless true # @game_over
           winner = @robots.keys.first
@@ -256,8 +256,14 @@ class TkArena
     end
   end
 
+  def stop
+    # @interval.stop
+    `clearInterval(#@interval)`
+  end
+
   def run
-    @interval = every(1/25) { draw_frame }
+#    @interval = every(1/25) { draw_frame }
+    @interval = `setInterval(function(){#{draw_frame}}, 1/25 * 1000)`
   end
 
 end
